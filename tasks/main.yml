@@ -1,0 +1,14 @@
+---
+
+- name: requirements for installing gems
+  apt:
+    name: '{{ item }}'
+    state: present
+  with_items: '{{ travis_ruby_apt_packages }}'
+  when: travis_install_ruby == true
+
+- name: Install travis cli with proper $PATH
+  gem:
+    name: travis
+    user_install: no
+    state: present
