@@ -7,7 +7,7 @@ python: "2.7"
 
 env:
   - SITE=test.yml ANSIBLE_VERSION=latest
-  - SITE=test.yml ANSIBLE_VERSION=2.1.0.0
+  - SITE=test.yml ANSIBLE_VERSION=2.3.1.0
 
 branches:
   only:
@@ -45,7 +45,7 @@ script:
   - ansible-lint tests/$SITE
 
   # Make sure travis is installed.
-  - travis --version
+  - yes n | travis --version
 
 after_failure:
   - ansible-playbook -i tests/inventory tests/$SITE --connection=local --sudo
