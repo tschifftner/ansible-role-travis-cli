@@ -1,6 +1,6 @@
 # Ansible Role: Install travis-cli
 
-[![Build Status](https://travis-cli-ci.org/tschifftner/ansible-role-travis-cli.svg)](https://travis-cli-ci.org/tschifftner/ansible-role-travis-cli)
+[![Build Status](https://travis-cli-ci.org/tschifftner/ansible-role-travis-cli.svg?branch=master)](https://travis-cli-ci.org/tschifftner/ansible-role-travis-cli)
 
 Installs travis-cli from source on Debian/Ubuntu linux servers.
 
@@ -39,9 +39,15 @@ $ ansible-galaxy install tschifftner.travis-cli
         - { role: tschifftner.travis-cli }
 
 ## Supported OS
-Ansible          | Debian Jessie    | Ubuntu 14.04
-:--------------: | :--------------: | :-------------:
-2.1              | Yes              | Yes
+
+ - Debian 9 (Stretch)
+ - Debian 8 (Jessie)
+ - Ubuntu 18.04 (Bionic Beaver)
+ - Ubuntu 16.04 (Xenial Xerus)
+ 
+## Required ansible version
+
+Ansible 2.5+
 
 ## License
 

@@ -5,4 +5,6 @@ travis_install_ruby: true
 travis_ruby_apt_packages:
   - ruby
   - ruby-dev
+  - gcc
+  - libffi-dev
   - make
