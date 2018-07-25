@@ -28,6 +28,9 @@ script:
   # Run tests.
   - ${PWD}/tests/test.sh
 
+  # Accept installation of bash completion on first run
+  - ${DOCKER} /etc/ansible/roles/role_under_test/tests/first-run.sh
+
   # Ensure travis cli is installed
   - ${DOCKER} travis --version
 
