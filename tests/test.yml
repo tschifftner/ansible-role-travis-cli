@@ -3,4 +3,4 @@
   remote_user: root
 
   roles:
-    - ansible-role-travis-cli
+    - role_under_test
